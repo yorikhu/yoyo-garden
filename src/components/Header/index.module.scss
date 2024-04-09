@@ -40,17 +40,24 @@
       gap: 12px;
 
       .nav-item {
+        overflow: hidden;
         height: 100%;
-        padding: 8px 12px;
         border-radius: 8px;
         cursor: pointer;
+        transition: background-color 0.2s;
 
-        &:hover {
-          background: #4c4c4c;
+        &:hover,
+        &.active {
+          background-color: #4c4c4c;
 
           a {
             color: #fff;
           }
+        }
+
+        a {
+          padding: 8px 12px;
+          transition: color 0.2s;
         }
       }
     }
