@@ -32,7 +32,7 @@
   .right-contain {
     display: flex;
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 0;
 
     .nav-list {
       display: flex;
@@ -43,10 +43,14 @@
         overflow: hidden;
         height: 100%;
         border-radius: 8px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
         cursor: pointer;
-        transition: background-color 0.2s;
 
-        &:hover,
+        &:hover {
+          border: 2px solid #4c4c4c;
+        }
+
         &.active {
           background-color: #4c4c4c;
 
