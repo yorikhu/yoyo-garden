@@ -1,3 +1,9 @@
+@import "@/app/common.scss";
+
 .home {
-  display: block;
+  display: flex;
+  height: calc(100vh - $headerHeight);
+  background-color: #fffbfb;
+  justify-content: center;
+  align-items: center;
 }
