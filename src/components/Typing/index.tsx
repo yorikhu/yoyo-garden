@@ -8,7 +8,9 @@ type Props = {
   textList?: string[];
 };
 
-function Typing({ textList = ["hahahahaha"] }: Props) {
+function Typing({
+  textList = ["花开堪折直需折，莫待无花空折枝", "测试文案"],
+}: Props) {
   const [currentText, setCurrentText] = useState<string>("");
 
   const typing = async (current: string, text: string) => {
@@ -17,6 +19,7 @@ function Typing({ textList = ["hahahahaha"] }: Props) {
       setCurrentText(current);
       await sleep(100);
     }
+    await sleep(1000);
     while (current.length > 0) {
       current = current.slice(0, current.length - 1);
       setCurrentText(current);
@@ -24,8 +27,16 @@ function Typing({ textList = ["hahahahaha"] }: Props) {
     }
   };
 
+  const runTextListLoop = async () => {
+    const text = textList.shift();
+    if (!text) return;
+    await typing(currentText, text);
+    textList.push(text);
+    runTextListLoop();
+  };
+
   useOneceEffect(() => {
-    typing(currentText, textList[0]);
+    runTextListLoop();
   }, []);
 
   return (
