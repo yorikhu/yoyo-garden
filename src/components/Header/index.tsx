@@ -6,11 +6,11 @@ import cls from "classnames";
 
 const navList = [
   {
-    name: "HOME",
+    name: "Home",
     link: "/garden/home",
   },
   {
-    name: "BLOG",
+    name: "Blog",
     link: "/garden/blog",
   },
   {
@@ -26,9 +26,7 @@ function Header() {
     <div className={styles["header"]}>
       <div className={styles["left-contain"]}>
         <h2 className={styles["main-logo"]}>
-          <Link href="/garden/home">
-            Yoyo&lsquo;s Garden
-          </Link>
+          <Link href="/garden/home">Yoyo&lsquo;s Garden</Link>
         </h2>
       </div>
       <div className={styles["right-contain"]}>
@@ -40,9 +38,7 @@ function Header() {
                 [styles["active"]]: nav.link === pathname,
               })}
             >
-              <Link href={nav.link}>
-                {nav.name}
-              </Link>
+              <Link href={nav.link}>{nav.name}</Link>
             </li>
           ))}
         </ul>

@@ -1,9 +1,37 @@
 @import "@/app/common.scss";
 
 .home {
+  box-sizing: content-box;
   display: flex;
-  height: calc(100vh - $headerHeight);
-  background-color: #fffbfb;
+  height: calc(100vh - $headerHeight * 2);
+  padding-bottom: $headerHeight;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 24px;
+
+  .title-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .main-title {
+      color: rgb(0, 62, 0);
+
+      .strong-text {
+        font-size: 48px;
+        color: brown;
+      }
+
+      .tiny-text {
+        font-size: 36px;
+      }
+    }
+
+    .sub-title {
+      font-size: 24px;
+      color: rgb(0, 62, 0);
+    }
+  }
 }
