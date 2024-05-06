@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./index.module.scss";
 import { sleep } from "@/utils/common";
+import { useMounted } from "@/hooks/common";
 
 type Props = {
   textList?: string[];
@@ -40,13 +41,13 @@ function Typing({ textList = [] }: Props) {
     }
   }
 
-  useEffect(() => {
+  useMounted(() => {
     const loop = new TextListLoop();
     loop.runTextListLoop();
     return () => {
       loop.clearTextListLoop();
     };
-  }, []);
+  });
 
   return (
     <div className={styles["typing"]}>
