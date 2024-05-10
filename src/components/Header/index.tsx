@@ -14,6 +14,10 @@ const navList = [
     link: "/garden/blog",
   },
   {
+    name: "Repository",
+    link: "/garden/repository",
+  },
+  {
     name: "About",
     link: "/garden/about",
   },

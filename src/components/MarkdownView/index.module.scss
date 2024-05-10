@@ -1,0 +1,15 @@
+.markdown-view {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto !important;
+  padding: 45px;
+  box-shadow: 0 0 10px #dbdbdb;
+  border-radius: 6px;
+
+  @media (max-width: 767px) {
+    & {
+      padding: 15px;
+    }
+  }
+}
