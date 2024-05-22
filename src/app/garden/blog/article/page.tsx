@@ -1,5 +1,5 @@
-import MarkdownView from "@/components/MarkdownView";
-import styles from "./page.module.scss";
+import MarkdownView from '@/components/MarkdownView';
+import styles from './page.module.scss';
 
 export default function Blog() {
   const md = `
@@ -13,8 +13,8 @@ console.log("123")
 \`\`\`
   `;
   return (
-    <div className={styles["article"]}>
-      <MarkdownView children={md} />
+    <div className={styles['article']}>
+      <MarkdownView>{md}</MarkdownView>
     </div>
   );
 }
