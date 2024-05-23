@@ -1,25 +1,25 @@
-"use client";
-import Link from "next/link";
-import styles from "./index.module.scss";
-import { usePathname } from "next/navigation";
-import cls from "classnames";
+'use client';
+import cls from 'classnames';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import styles from './index.module.scss';
 
 const navList = [
   {
-    name: "Home",
-    link: "/garden/home",
+    name: 'Home',
+    link: '/garden/home',
   },
   {
-    name: "Blog",
-    link: "/garden/blog",
+    name: 'Blog',
+    link: '/garden/blog',
   },
   {
-    name: "Repository",
-    link: "/garden/repository",
+    name: 'Repository',
+    link: '/garden/repository',
   },
   {
-    name: "About",
-    link: "/garden/about",
+    name: 'About',
+    link: '/garden/about',
   },
 ];
 
@@ -27,19 +27,19 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <div className={styles["header"]}>
-      <div className={styles["left-contain"]}>
-        <h2 className={styles["main-logo"]}>
+    <div className={styles['header']}>
+      <div className={styles['left-contain']}>
+        <h2 className={styles['main-logo']}>
           <Link href="/garden/home">Yoyo&lsquo;s Garden</Link>
         </h2>
       </div>
-      <div className={styles["right-contain"]}>
-        <ul className={styles["nav-list"]}>
+      <div className={styles['right-contain']}>
+        <ul className={styles['nav-list']}>
           {navList.map((nav) => (
             <li
               key={nav.name}
-              className={cls(styles["nav-item"], {
-                [styles["active"]]: nav.link === pathname,
+              className={cls(styles['nav-item'], {
+                [styles['active']]: pathname?.includes(nav.link),
               })}
             >
               <Link href={nav.link}>{nav.name}</Link>
