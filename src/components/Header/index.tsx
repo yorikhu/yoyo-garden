@@ -39,7 +39,7 @@ function Header() {
             <li
               key={nav.name}
               className={cls(styles["nav-item"], {
-                [styles["active"]]: nav.link === pathname,
+                [styles["active"]]: pathname?.includes(nav.link),
               })}
             >
               <Link href={nav.link}>{nav.name}</Link>
