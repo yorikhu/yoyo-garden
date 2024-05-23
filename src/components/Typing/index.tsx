@@ -1,15 +1,15 @@
-"use client";
-import { useState } from "react";
-import styles from "./index.module.scss";
-import { sleep } from "@/utils/common";
-import { useMounted } from "@/hooks/common";
+'use client';
+import { useMounted } from '@/hooks/common';
+import { sleep } from '@/utils/common';
+import { useState } from 'react';
+import styles from './index.module.scss';
 
 type Props = {
   textList?: string[];
 };
 
 function Typing({ textList = [] }: Props) {
-  const [currentText, setCurrentText] = useState<string>("");
+  const [currentText, setCurrentText] = useState<string>('');
 
   class TextListLoop {
     needClear: boolean = false;
@@ -50,8 +50,8 @@ function Typing({ textList = [] }: Props) {
   });
 
   return (
-    <div className={styles["typing"]}>
-      <p className={styles["text-contain"]}>{`/* ${currentText} */`} </p>
+    <div className={styles['typing']}>
+      <p className={styles['text-contain']}>{`/* ${currentText} */`} </p>
     </div>
   );
 }

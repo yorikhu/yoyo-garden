@@ -1,3 +1,9 @@
+'use client';
+
 export default function Blog() {
-  return <></>;
+  return (
+    <>
+      <div className=""></div>
+    </>
+  );
 }
