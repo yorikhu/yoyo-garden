@@ -37,6 +37,12 @@
     font-display: swap;
   }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     min-height: calc(100vh - $headerHeight);
     margin: 0;
@@ -55,21 +61,15 @@
       'Segoe UI Emoji',
       Segoe UI Symbol,
       'Noto Color Emoji';
-    color: #333;
+    color: #4c4c4c;
     background-color: #fffbfb;
-  }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    list-style: none;
+    ul {
+      list-style: none;
+    }
   }
 }
