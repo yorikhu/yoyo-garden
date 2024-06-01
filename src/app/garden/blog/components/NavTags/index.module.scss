@@ -1,0 +1,36 @@
+@import '@/app/common.scss';
+
+.nav-tags {
+  position: sticky;
+  top: calc($headerHeight + 24px);
+  width: 180px;
+  margin: 24px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #dbdbdb;
+  flex-shrink: 0;
+
+  .nav-title {
+    padding: 12px 24px;
+    background: #4c4c4c;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .tag-list {
+    padding: 12px 0;
+
+    .tag {
+      padding: 12px 24px;
+      margin: 0 12px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f2f4f5;
+      }
+    }
+  }
+}
